@@ -7,7 +7,7 @@ class ShoppingCart extends Component{
 		return this.props.cart.map(item =>{
 			return (
 				<CartItem 
-				key={item.title} 
+				key={item.id} 
 				cartItem = {item} 
 				removeItemFromCart = {this.props.removeItemFromCart}
 				/>

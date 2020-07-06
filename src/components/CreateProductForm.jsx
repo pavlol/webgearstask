@@ -8,15 +8,18 @@ class CreateProductForm extends Component{
 		this.state = {
 			title : "", 
 			price:"", 
-			imageUrl:"https://react.semantic-ui.com/images/wireframe/image.png", 
+			imageUrl:"", 
 			description:""
 		}
 	}
 
 	addToInventory = () => {
-		this.props.addToInventory({...this.state});
-	}
+		const imageUrl = this.state.imageUrl ? this.state.imageUrl : "https://react.semantic-ui.com/images/wireframe/image.png";
+		
+		this.props.addToInventory({...this.state, imageUrl});
 
+		this.setState({title : "", price : "", imageUrl: "", description: ""})
+	}
 	
 	handleTitleChange = (e) => {
 		this.setState({title : e.target.value})

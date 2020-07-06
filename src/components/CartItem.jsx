@@ -23,7 +23,7 @@ class CartItem extends Component{
 					size='mini' 
 					basic 
 					icon='times' 
-					onClick={removeItemFromCart.bind(this, cartItem.title)} 
+					onClick={removeItemFromCart.bind(this, cartItem.id)} 
 					/>
 				</Item.Content>
 			</Item>

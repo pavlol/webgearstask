@@ -17,7 +17,7 @@ class InventoryProduct extends Component{
 				size='mini' 
 				basic 
 				icon='times' 
-				onClick={this.removeFromInventory.bind(this, product.title)} 
+				onClick={this.removeFromInventory.bind(this, product.id)} 
 				/>
 			</div>
 		)

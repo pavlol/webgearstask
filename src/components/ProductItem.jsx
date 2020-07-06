@@ -3,12 +3,12 @@ import { Item, Button } from 'semantic-ui-react'
 
 class ProductItem extends Component{
 
-
 	render(){
 		const {inventoryItem, addToCart} = this.props;
+		const imageUrl = inventoryItem.imageUrl ? inventoryItem.imageUrl : "https://react.semantic-ui.com/images/wireframe/image.png";
 		return(
 			<Item>
-				<Item.Image size='small' src={inventoryItem.imageUrl} />
+				<Item.Image size='small' src={imageUrl} />
 
 				<Item.Content verticalAlign='middle'>
 					<Item.Description>
